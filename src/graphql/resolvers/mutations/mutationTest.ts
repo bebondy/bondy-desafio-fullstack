@@ -1,4 +1,3 @@
-
-export const mutationTest = (_parent, args, _context, _info) => {
+export const mutationTest = async (_parent, args, _context, _info) => {
   return args.test
 }
