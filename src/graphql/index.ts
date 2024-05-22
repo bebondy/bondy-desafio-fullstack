@@ -7,6 +7,7 @@ import {
 } from '@as-integrations/aws-lambda'
 import { buildSubgraphSchema } from '@apollo/subgraph'
 import resolvers from './resolvers'
+import { connection } from '../memoryDB/connection'
 
 const { NODE_ENV = 'local' } = process.env
 
@@ -29,6 +30,7 @@ const buildContext = startServerAndCreateLambdaHandler(
     context: async ({ event, context }) => {
       context.callbackWaitsForEmptyEventLoop = false
       console.log(`Connected in ${NODE_ENV} environment`)
+      await connection()
       return {
         headers: event.headers,
         functionName: context.functionName,
