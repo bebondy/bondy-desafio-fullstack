@@ -1,7 +1,7 @@
 # bondy-desafio-fullstack
 
 ## Estrutura do repositório:
-Este projeto é um monorepo construido com Lerna (para saber mais => https://lerna.js.org/)
+Este projeto é um monorepo construído com Lerna (para saber mais => https://lerna.js.org/)
 
 - `backend` (API Graphql para realizar desafio de backend)
 - `frontend` (Repo para criação do frontend do desafio)
